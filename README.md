@@ -75,7 +75,7 @@ Data structure:
 
 ***remarks (string)**: additional details passed by the payment rails.*
 
-***transfertype (string)**: identifies the type of transfer, only used for QRPH transactions *
+***transfertype (string)**: identifies the type of transfer, only used for QRPH transactions*
 
 Sample request:
 
