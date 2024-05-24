@@ -45,7 +45,7 @@ Retries will follow the timing below:
 
 Currently, we can support to provide webhooks for the following events:
 
-Incoming Fund Transfer from Instapay and Pesonet![](Aspose.Words.4d901b5c-c735-4b23-9164-17a21d8af389.002.png)
+#### 1. Incoming Fund Transfer from Instapay and Pesonet![](Aspose.Words.4d901b5c-c735-4b23-9164-17a21d8af389.002.png)
 
 - Event name: *PROCESS\_PESONET\_INCOMING\_FUND\_TRANSFER* and *SETTLE\_INCOMING\_INSTAPAY\_TRANSFER* 
 - Timing: whenever a fund transfer is credited to one of your accounts from Instapay or Pesonet
@@ -69,11 +69,17 @@ Data structure:
 
 ***recipientAccountNumber (string)**: the VCA number that received the transaction.*
 
-***recipientAccountNumberBankFormat (string)**: the Netbank bank account number where the funds were credited. **sender.accountNumber (string)**: the account number of the source bank account that end-customers/partners used to transfer the funds.*
+***recipientAccountNumberBankFormat (string)**: the Netbank bank account number where the funds were credited.
 
-***sender.accountName (string)**: the account name of the source bank account that end-customers/partners used to transfer the funds. **sender.institutionCode (string)**: the bank code of the bank that the end-customers/partners used to transfer funds.*
+**sender.accountNumber (string)**: the account number of the source bank account that end-customers/partners used to transfer the funds.*
 
-***alias (string)**: the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to. **referenceCode (string)**: the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number*
+***sender.accountName (string)**: the account name of the source bank account that end-customers/partners used to transfer the funds. 
+
+**sender.institutionCode (string)**: the bank code of the bank that the end-customers/partners used to transfer funds.*
+
+***alias (string)**: the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to. 
+
+**referenceCode (string)**: the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number*
 
 ***remarks (string)**: additional details passed by the payment rails.*
 
@@ -104,13 +110,14 @@ Sample request:
 }
 ```
 
-Outgoing Fund Transfer via Instapay and Pesonet
+#### 2. Outgoing Fund Transfer via Instapay and Pesonet
 
 - Event name: `TRANSFER_STATUS_CHANGE`
 - Timing: sent whenever a disbursement sent through Instapay or Pesonet changes its settlement status
 - Use Case: Local Payout and Local Payout-via-QR
 
 Data Structure:
+
 ***amount (number):**  the amount of funds that were transferred*
 
 ***channel (string):** he payment rail that was used for the fund transfer (can be `PESONet, Instapay`)*
@@ -151,7 +158,7 @@ Sample request:
 }
 ```
 
-ECPay Credit Notification
+#### 3. ECPay Credit Notification
 
 - Event name: `PROCESS_DIRECT_INCOMING_FUND_TRANSFER`
 - Timing: whenever a fund transfer is credited to one of your accounts from an `ECPAY` deposit
@@ -187,6 +194,7 @@ Data Structure:
 
 ***remarks (string):** additional details passed by the payment rails*
 
+Sample request:
 
 ```
 {
