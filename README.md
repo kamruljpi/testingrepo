@@ -4,7 +4,7 @@
 
 A Webhook is a notification mechanism that allows you to receive information from specific events taking place in various kinds of transactions or operations such as when funds are credited to an account.
 
-` `Compared to running cron  jobs or polling an endpoint, webhooks are a more scalable alternative as it is a push notification service which is less system intensive. 
+Compared to running cron  jobs or polling an endpoint, webhooks are a more scalable alternative as it is a push notification service which is less system intensive. 
 
 Important:![](Aspose.Words.4d901b5c-c735-4b23-9164-17a21d8af389.001.png)
 
@@ -27,7 +27,9 @@ IP whitelisting is the security mechanism that Netbank employs on its webhook se
 
 The retry mechanism is a way of ensuring that webhook events are delivered to the destination server in case of failures. The webhook service will retry if we are not able to establish any HTTP connection to your endpoint.
 
-In case of non-200 responses, the webhook service will account for this response and will not retry. Retries will follow the timing below:
+In case of non-200 responses, the webhook service will account for this response and will not retry. 
+
+Retries will follow the timing below:
 
 1st retry: 1 min
 
