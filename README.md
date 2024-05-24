@@ -45,9 +45,9 @@ Currently, we can support to provide webhooks for the following events:
 
 Incoming Fund Transfer from Instapay and Pesonet![](Aspose.Words.4d901b5c-c735-4b23-9164-17a21d8af389.002.png)
 
-Event name: *PROCESS\_PESONET\_INCOMING\_FUND\_TRANSFER* and *SETTLE\_INCOMING\_INSTAPAY\_TRANSFER* Timing: whenever a fund transfer is credited to one of your accounts from Instapay or Pesonet
-
-Use Case: Local Collect and Local Collect-via-QR
+- Event name: *PROCESS\_PESONET\_INCOMING\_FUND\_TRANSFER* and *SETTLE\_INCOMING\_INSTAPAY\_TRANSFER* 
+- Timing: whenever a fund transfer is credited to one of your accounts from Instapay or Pesonet
+- Use Case: Local Collect and Local Collect-via-QR
 
 Data structure:
 
@@ -109,18 +109,28 @@ Outgoing Fund Transfer via Instapay and Pesonet
 - Use Case: Local Payout and Local Payout-via-QR
 
 Data Structure:
-***amount (number):**  the amount of funds that were transferred*
-***channel (string):** he payment rail that was used for the fund transfer (can be `PESONet, Instapay`)*
-***operationId (number):** the unique transaction id from Netbank’s Core Banking System*
-***ownerCifNumber (string):** the sender's Customer Information File number within Netbank’s system*
-***productBranchCode (string):** the Netbank Branch Code where the Netbank bank account resides*
-***recipientAccountNumber (string):** the destination bank account number of the transfer*
-***referenceNumber (string):** the unique transaction id from the payment rails*
-***registrationTime (string):** the time and date when the settlement status has changed.*
-***sender.accountNumber (string):** the account number of the Netbank source bank account*
+***amount (number):**  the amount of funds that were transferred *
+
+***channel (string):** he payment rail that was used for the fund transfer (can be `PESONet, Instapay`) *
+
+***operationId (number):** the unique transaction id from Netbank’s Core Banking System *
+
+***ownerCifNumber (string):** the sender's Customer Information File number within Netbank’s system *
+
+***productBranchCode (string):** the Netbank Branch Code where the Netbank bank account resides *
+
+***recipientAccountNumber (string):** the destination bank account number of the transfer *
+
+***referenceNumber (string):** the unique transaction id from the payment rails *
+
+***registrationTime (string):** the time and date when the settlement status has changed. *
+
+***sender.accountNumber (string):** the account number of the Netbank source bank account *
+
 ***status (string):** the current settlement status of the fund transfer (SETTLED or REJECTED for INSTAPAY; FOR_SETTLEMENT,
-SETTLED or REJECTED for PESONET)*
-***transfertype (string):** the type of transfer of the transaction (OUTGOING)*
+SETTLED or REJECTED for PESONET) *
+
+***transfertype (string):** the type of transfer of the transaction (OUTGOING) *
 
 Sample request:
 ```
@@ -146,20 +156,35 @@ ECPay Credit Notification
 - Use Case: Local Collect
 
 Data Structure:
-***alias (long):** the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to*
-***amount (BigDecimal):** the amount of funds that were credited to the VCA and the Netbank bank account*
-***channel (string):** the payment rail that was used for the fund transfer (“ECPAY”)*
-***commandId (long)***: the event identifier from Netbank’s Core Banking System
-***externalTransferStatus (string)***: the status of the inbound transaction (“PROCESSED”)
-***operationId (long)***: the unique transaction id from Netbank’s Core Banking System
-***productBranchCode (long)***: the Netbank Branch Code where the Netbank bank account resides
-***recipientAccountName (string)***: the account name from the input by the depositor
-***recipientAccountNumber (string)***: the VCA number that received the transaction
-***recipientAccountNumberBankFormat (string)***: the Netbank bank account number where the funds were credited
-***referenceCode (string)***: the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number
-***referenceNumber (string)***: the unique transaction id from the payment rails
-***registrationTime (localdatetime)***: the date and time the funds were credited to the Netbank bank account
-***remarks (string)***: additional details passed by the payment rails
+
+***alias (long):** the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to *
+
+***amount (BigDecimal):** the amount of funds that were credited to the VCA and the Netbank bank account *
+
+***channel (string):** the payment rail that was used for the fund transfer (“ECPAY”) *
+
+***commandId (long):** the event identifier from Netbank’s Core Banking System *
+
+***externalTransferStatus (string):** the status of the inbound transaction (“PROCESSED”) *
+
+***operationId (long):** the unique transaction id from Netbank’s Core Banking System *
+
+***productBranchCode (long):** the Netbank Branch Code where the Netbank bank account resides *
+
+***recipientAccountName (string):** the account name from the input by the depositor *
+
+***recipientAccountNumber (string):** the VCA number that received the transaction *
+
+***recipientAccountNumberBankFormat (string):** the Netbank bank account number where the funds were credited *
+
+***referenceCode (string):** the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number *
+
+***referenceNumber (string):** the unique transaction id from the payment rails *
+
+***registrationTime (localdatetime):** the date and time the funds were credited to the Netbank bank account *
+
+***remarks (string):** additional details passed by the payment rails *
+
 
 ```
 {
