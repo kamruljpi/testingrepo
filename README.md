@@ -71,17 +71,17 @@ Data structure:
 
 ***recipientAccountNumberBankFormat (string)**: the Netbank bank account number where the funds were credited.*
 
-**sender.accountNumber (string)**: the account number of the source bank account that end-customers/partners used to transfer the funds.*
+***sender.accountNumber (string)**: the account number of the source bank account that end-customers/partners used to transfer the funds*
 
-***sender.accountName (string)**: the account name of the source bank account that end-customers/partners used to transfer the funds.*
+***sender.accountName (string)**: the account name of the source bank account that end-customers/partners used to transfer the funds*
 
-**sender.institutionCode (string)**: the bank code of the bank that the end-customers/partners used to transfer funds.*
+***sender.institutionCode (string)**: the bank code of the bank that the end-customers/partners used to transfer funds*
 
-***alias (string)**: the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to.*
+***alias (string)**: the fixed 5-digit code that we is associated to the Netbank Bank Account where the funds were credited to*
 
-**referenceCode (string)**: the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number*
+***referenceCode (string)**: the 7-digit code that you generated and concatenated with the Partner Alias to complete the Virtual Collection Account Number*
 
-***remarks (string)**: additional details passed by the payment rails.*
+***remarks (string)**: additional details passed by the payment rails*
 
 ***transfertype (string)**: identifies the type of transfer, only used for QRPH transactions*
 
