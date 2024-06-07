@@ -69,7 +69,7 @@ There are several ways to confirm if a payment into a VCA has been received, all
 
 1. Via the Channel Transactions page of the [Netbank Virtual Partner Dashboard](/home), you can view funds you have received in the UAT and PRODUCTION environment under the Collect Tab. Transaction details are displayed in an easy-to-understand and straightforward tabular format that includes the destination VCA that the funds were paid to. 
 
-![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.002.jpeg)
+	![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.002.jpeg)
 
 1. We can register an endpoint that you will expose in order to receive credit notification webhooks. You may refer to the documentation on webhooks [here ](https://netbank.atlassian.net/wiki/spaces/NVP/pages/104693778)for further information.
 
