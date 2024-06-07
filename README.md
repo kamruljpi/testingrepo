@@ -1,6 +1,6 @@
-Virtual Collection Accounts (VCA)
+# Virtual Collection Accounts (VCA)
 
-Overview
+## Overview
 
 Virtual Collection Accounts (VCA) is one of Netbank’s Banking-as-a-Service solutions that enables you, our Partners, to accept fully- traceable bank transfer payments from clients. 
 
@@ -18,7 +18,7 @@ There are generally no (or very minimal) APIs needed to integrate VCAs, making i
 
 You also can receive notifications directly from our system to yours via webhooks as soon as we receive the inbound transaction.
 
-Generating Virtual Collection Accounts
+## Generating Virtual Collection Accounts
 
 Generating Virtual Collection Accounts do not require any API integration. Instead, it is a standard format of generating the accounts that simply need to be followed. VCA numbers are generally 12-digit numbers that are comprised of:
 
@@ -28,7 +28,7 @@ Generating Virtual Collection Accounts do not require any API integration. Inste
 
 To enable Netbank to assign your Partner Alias, you will need to provide Netbank your nominated Netbank Corporate Account that will receive the payments credited to VCAs.
 
-Using Virtual Collection Accounts
+## Using Virtual Collection Accounts
 
 Virtual Collection Accounts are highly-flexible.
 
@@ -38,7 +38,7 @@ On the flipside, you can use VCAs by assigning them similar to a dedicated bank 
 
 However you decide, Netbank does not need to be notified on your preferred use-case. 
 
-Features and Benefits of VCA’s
+## Features and Benefits of VCA’s
 
 The VCA being a collection solution, allows for easier payment reconciliation. As you have visibility of the VCA that your payors are crediting, once funds are received, tagging payables as paid is much easier. This also eliminates the extra step for payors to send a proof of payment.
 
@@ -46,41 +46,41 @@ For fintechs and businesses looking to roll out a collection solution that is re
 
 As VCAs are essentially a masking of your Netbank Corporate account, whenever a fund transfer occurs, they are settled directly with Netbank. The settlement schedule follows solely that of Instapay and Pesonet, eliminating clearing delays that are commonly experienced with other payment aggregators where there is normally further batching and crediting.
 
-Making Payments to VCA’s
+## Making Payments to VCA’s
 
 The user journey of paying a VCA is simple and straightforward: users log on to their favorite banking or e-wallet apps (GCash, Maya, Unionbank, BDO, BPI, etc)
 
-1. Select the option where can perform a fund transfer (normally labelled “Transfer” or “Send Money to Other Banks”),
-1. Look for “Netbank” in the list of banks,
-1. Enter the amount, the account name of your Netbank Corporate Account and the **VCA as the destination account number**.
+- 1. Select the option where can perform a fund transfer (normally labelled “Transfer” or “Send Money to Other Banks”),
+- 2. Look for “Netbank” in the list of banks,
+- 3. Enter the amount, the account name of your Netbank Corporate Account and the **VCA as the destination account number**.
 
 ![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.001.jpeg)
 
-Payment Confirmation
+## Payment Confirmation
 
 There are several ways to confirm if a payment into a VCA has been received, allowing for great flexibility for system and operational integration for your apps/platforms or workflow.
 
-1. Via the Channel Transactions page of the [Netbank Virtual Partner Dashboard](https://virtual.netbank.ph/home), you can view funds you have received in the UAT and PRODUCTION environment under the Collect Tab. Transaction details are displayed in an easy-to-understand and straightforward tabular format that includes the destination VCA that the funds were paid to. 
+- 1. Via the Channel Transactions page of the [Netbank Virtual Partner Dashboard](https://virtual.netbank.ph/home), you can view funds you have received in the UAT and PRODUCTION environment under the Collect Tab. Transaction details are displayed in an easy-to-understand and straightforward tabular format that includes the destination VCA that the funds were paid to. 
 
 ![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.002.jpeg)
 
-2. We can register an endpoint that you will expose in order to receive credit notification webhooks. You may refer to the documentation on webhooks [here ](https://netbank.atlassian.net/wiki/spaces/NVP/pages/104693778)for further information.
-2. Via our [Retrieve Bank Account Transaction History](https://virtual.netbank.ph/docs#tag/Account-As-A-Service/operation/Account-As-A-Service_RetrieveBankAccountTransactionHistory) API endpoint, you can use a VCA number in the path parameter to obtain a list of transactions. Kindly refer to our API documentation for further details.
+- 2. We can register an endpoint that you will expose in order to receive credit notification webhooks. You may refer to the documentation on webhooks [here ](https://netbank.atlassian.net/wiki/spaces/NVP/pages/104693778)for further information.
+- 3. Via our [Retrieve Bank Account Transaction History](https://virtual.netbank.ph/docs#tag/Account-As-A-Service/operation/Account-As-A-Service_RetrieveBankAccountTransactionHistory) API endpoint, you can use a VCA number in the path parameter to obtain a list of transactions. Kindly refer to our API documentation for further details.
 
-QRPH Integration
+## QRPH Integration
 
 Generating QRPH images for Virtual Collection Accounts is also possible. Kindly refer to our API documentation [here](https://virtual.netbank.ph/docs#tag/QR-PH/operation/QR-PH_CreateQRPH).
 
 You can use a specific Virtual Collection Account as the “destination\_account” in the Generate QRPH Image endpoint. This way, payors would not have to manually type in their target VCA when performing a fund transfer but instead, upload or scan a QR image. This minimizes or even eliminates the possibility of payors transferring to erroneous account details.
 
-Testing and Integration
+## Testing and Integration
 
 There is little to no API integration that would need to be done to implement Virtual Collection Accounts to your system.
 
 In order to commence testing, you may contact your Client Success Manager via [support@netbank.ph ](mailto:support@netbank.ph)or an alternative communication point that they have established for you to receive assistance during integration. Your client Success Managers would ask you for
 
-1. The UAT bank account account (that you have opened via the Netbank Virtual Partner Dashboard) where your assigned 5-digit Partner Alias would be associated and 
-1. A URL endpoint that you have exposed where we can push credit notification webhooks.
+- 1. The UAT bank account account (that you have opened via the Netbank Virtual Partner Dashboard) where your assigned 5-digit Partner Alias would be associated and 
+- 2. A URL endpoint that you have exposed where we can push credit notification webhooks.
 
 To simulate incoming transfers in the UAT environment, kindly utilize Netbank’s [Process Account-To-Account Fund Transfer](https://virtual.netbank.ph/docs#tag/Disburse-To-Account/operation/Disburse-To-Account_ProcessAccount-To-AccountFundTransfer) API. You can open and nominate another UAT bank account and designate it as your source account.
 
