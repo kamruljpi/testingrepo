@@ -54,11 +54,11 @@ As VCAs are essentially a masking of your Netbank Corporate account, whenever a 
 
 The user journey of paying a VCA is simple and straightforward: users log on to their favorite banking or e-wallet apps (GCash, Maya, Unionbank, BDO, BPI, etc)
 
-- 1. Select the option where can perform a fund transfer (normally labelled “Transfer” or “Send Money to Other Banks”),
+1. Select the option where can perform a fund transfer (normally labelled “Transfer” or “Send Money to Other Banks”),
 
-- 2. Look for “Netbank” in the list of banks,
+1. Look for “Netbank” in the list of banks,
 
-- 3. Enter the amount, the account name of your Netbank Corporate Account and the **VCA as the destination account number**.
+1. Enter the amount, the account name of your Netbank Corporate Account and the **VCA as the destination account number**.
 
 ![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.001.jpeg)
 
@@ -67,13 +67,13 @@ The user journey of paying a VCA is simple and straightforward: users log on to 
 
 There are several ways to confirm if a payment into a VCA has been received, allowing for great flexibility for system and operational integration for your apps/platforms or workflow.
 
-- 1. Via the Channel Transactions page of the [Netbank Virtual Partner Dashboard](/home), you can view funds you have received in the UAT and PRODUCTION environment under the Collect Tab. Transaction details are displayed in an easy-to-understand and straightforward tabular format that includes the destination VCA that the funds were paid to. 
+1. Via the Channel Transactions page of the [Netbank Virtual Partner Dashboard](/home), you can view funds you have received in the UAT and PRODUCTION environment under the Collect Tab. Transaction details are displayed in an easy-to-understand and straightforward tabular format that includes the destination VCA that the funds were paid to. 
 
 ![](Aspose.Words.421236d4-1bb5-4719-9c66-44ad9f5bf7f8.002.jpeg)
 
-- 2. We can register an endpoint that you will expose in order to receive credit notification webhooks. You may refer to the documentation on webhooks [here ](https://netbank.atlassian.net/wiki/spaces/NVP/pages/104693778)for further information.
+1. We can register an endpoint that you will expose in order to receive credit notification webhooks. You may refer to the documentation on webhooks [here ](https://netbank.atlassian.net/wiki/spaces/NVP/pages/104693778)for further information.
 
-- 3. Via our [Retrieve Bank Account Transaction History](/docs#tag/Account-As-A-Service/operation/Account-As-A-Service_RetrieveBankAccountTransactionHistory) API endpoint, you can use a VCA number in the path parameter to obtain a list of transactions. Kindly refer to our API documentation for further details.
+1. Via our [Retrieve Bank Account Transaction History](/docs#tag/Account-As-A-Service/operation/Account-As-A-Service_RetrieveBankAccountTransactionHistory) API endpoint, you can use a VCA number in the path parameter to obtain a list of transactions. Kindly refer to our API documentation for further details.
 
 
 ## QRPH Integration
@@ -89,9 +89,9 @@ There is little to no API integration that would need to be done to implement Vi
 
 In order to commence testing, you may contact your Client Success Manager via [support@netbank.ph ](mailto:support@netbank.ph)or an alternative communication point that they have established for you to receive assistance during integration. Your client Success Managers would ask you for
 
-- 1. The UAT bank account account (that you have opened via the Netbank Virtual Partner Dashboard) where your assigned 5-digit Partner Alias would be associated and 
+1. The UAT bank account account (that you have opened via the Netbank Virtual Partner Dashboard) where your assigned 5-digit Partner Alias would be associated and 
 
-- 2. A URL endpoint that you have exposed where we can push credit notification webhooks.
+1. A URL endpoint that you have exposed where we can push credit notification webhooks.
 
 To simulate incoming transfers in the UAT environment, kindly utilize Netbank’s [Process Account-To-Account Fund Transfer](/docs#tag/Disburse-To-Account/operation/Disburse-To-Account_ProcessAccount-To-AccountFundTransfer) API. You can open and nominate another UAT bank account and designate it as your source account.
 
