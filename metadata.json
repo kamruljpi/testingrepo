@@ -1,0 +1,12 @@
+{
+    "name": "KSC",
+    "symbol": "KSC",
+    "description": "KSC test coin On Solana",
+    "image": "https://raw.githubusercontent.com/kamruljpi/testingrepo/main/song3.png?token=GHSAT0AAAAAACPJTPGE5AZBZW2LOKBSMOXOZT3C5PQ",
+    "attributes": [
+      {
+        "trait_type": "Item",
+        "value": "Developer Portal"
+      }
+    ]
+  }
